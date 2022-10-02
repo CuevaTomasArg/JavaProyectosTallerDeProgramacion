@@ -30,15 +30,18 @@ public class triangulo {
     private String color;
     
     public triangulo(double unlado1,double unlado2,double unlado3,String backgroud, String croma){
-        lado1 = unlado1;
-        lado2 = unlado2;
-        lado3 = unlado3;
-        relleno = backgroud;
-        color = croma;
+        this.lado1 = unlado1;
+        this.lado2 = unlado2;
+        this.lado3 = unlado3;
+        this.relleno = backgroud;
+        this.color = croma;
     }
     public triangulo(){
         
     }
+    
+    //METODOS
+    
     public void setSide1(double newSide){
         lado1 = newSide;
     }
@@ -61,7 +64,7 @@ public class triangulo {
         return lado1+lado2+lado3;
     }
     public double calcularArea(){
-        double S = (lado1+lado2+lado3)/2;
+        double S = this.calcularPerimetro()/2;
         return  Math.sqrt(S*(S-lado1)*(S-lado2)*(S-lado3));
     }
     

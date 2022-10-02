@@ -17,20 +17,20 @@ public class Libro {
      
     
     public Libro(  String unTitulo,  String unaEditorial, 
-    int unAñoEdicion,  String unPrimerAutor, String unISBN, double unPrecio){
+    int unAñoEdicion,  Autor unPrimerAutor, String unISBN, double unPrecio){
          titulo = unTitulo;
          editorial = unaEditorial; 
          añoEdicion= unAñoEdicion;
-         primerAutor = new Autor();
+         primerAutor = unPrimerAutor;
          ISBN =  unISBN;
          precio = unPrecio;
     }
     
-    public Libro(  String unTitulo,  String unaEditorial, String unPrimerAutor, String unISBN){
+    public Libro(  String unTitulo,  String unaEditorial, Autor unPrimerAutor, String unISBN){
          titulo = unTitulo;
          editorial = unaEditorial; 
          añoEdicion= 2015;
-         primerAutor = new Autor();
+         primerAutor = unPrimerAutor;
          ISBN =  unISBN;
          precio = 100;
     }
@@ -50,8 +50,8 @@ public class Libro {
         return añoEdicion;
     }
   
-    public String getPrimerAutor(){
-        return primerAutor.toString();
+    public Autor getPrimerAutor(){
+        return primerAutor;
     } 
     public String getISBN(){
         return ISBN;
@@ -71,11 +71,9 @@ public class Libro {
          añoEdicion = unAño;
     }
    
-    public void setPrimerAutor(String nombre,String bio, String nac){
-         primerAutor.setBiografia(bio);
-         primerAutor.setNombre(nombre);
-         primerAutor.setNacionalidad(nac);
-    } 
+    public void setPrimerAutor(Autor unPrimerAutor){
+        primerAutor = unPrimerAutor;
+   } 
     public void setISBN(String unISBN){
          ISBN=unISBN;
     } 
@@ -84,11 +82,10 @@ public class Libro {
     }
    
     
-   @Override
     public String toString(){
         String aux;
-        aux= titulo + " por " + primerAutor + " - " + añoEdicion + " - " + " ISBN: " + ISBN;
-       return ( aux);
+        aux= titulo + " por " + primerAutor.getNombre() + " - " + añoEdicion + " - " + " ISBN: " + ISBN;
+       return aux;
     }
         
 }

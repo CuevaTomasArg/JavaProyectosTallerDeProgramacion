@@ -10,14 +10,14 @@ package tema3;
  * @author tomas
  */
 public class Autor {
-    private String name;
-    private String biographi;
-    private String nacionalidad;
+    private String nombre;
+    private String boigrafia;
+    private String origen;
     
     public Autor(String nombre,String bio,String nac){
-        name = nombre;
-        biographi = bio;
-        nacionalidad = nac;
+        this.nombre = nombre;
+        this.boigrafia = bio;
+        this.origen = nac;
     }
     
     public Autor(){
@@ -25,32 +25,32 @@ public class Autor {
     }
     
     public void setNombre(String nombre){
-        name = nombre;
+        this.nombre = nombre;
     }
     
     public void setBiografia(String bio){
-        biographi = bio;
+        this.boigrafia = bio;
     }
     
     public void setNacionalidad(String nac){
-        nacionalidad = nac;
+        origen = nac;
     }
     
     
     public String getNombre(){
-        return name;
+        return nombre;
     }
     
     public String getBiografia(){
-        return biographi;
+        return boigrafia;
     }
     
     public String getNacionalidad(){
-        return nacionalidad;
+        return origen;
     }
     
     public String toString(){
-        String aux = "El autor es "+name+", su nacionalidad es "+nacionalidad+", y esta es su historia: "+biographi;
+        String aux = "El autor es "+nombre+", su nacionalidad es "+origen+", y esta es su historia: "+boigrafia;
         return aux;
     }
 }
