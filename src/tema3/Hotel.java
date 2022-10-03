@@ -43,6 +43,6 @@ public class Hotel {
                 System.out.println(this.hotel [i][j].toString());  
             }
         }
-        return "FIn";
+        return "Fin";
     }
 }
