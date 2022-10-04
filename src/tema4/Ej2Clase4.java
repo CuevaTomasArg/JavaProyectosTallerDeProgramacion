@@ -5,19 +5,17 @@
  */
 package tema4;
 
-
-public class DemoFiguras {
+/**
+ *
+ * @author tomas
+ */
+public class Ej2Clase4 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Triangulo t=new Triangulo(10,2,3,"Rojo","Amarillo");
-        System.out.println(t.toString());
-        t.despintar();
-        System.out.println(t.toString());
-       
+        Empleado E = new Jugador(1,10,"julian",2.5,5);
     }
     
-
 }

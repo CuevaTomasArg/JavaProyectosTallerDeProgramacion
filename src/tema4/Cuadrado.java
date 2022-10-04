@@ -27,11 +27,6 @@ public class Cuadrado extends Figura{
        return (getLado()*4);
     }
     
-    public String toString(){
-       String aux = super.toString() + 
-                    " Lado: " + getLado();
-       return aux;
-    }
 
  
 }
